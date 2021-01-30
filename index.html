@@ -123,8 +123,11 @@ document.getElementById('case-plus').addEventListener("click", function () {
 document.getElementById('case-minus').addEventListener("click", function () {
     const count = document.getElementById('case-count');
     const caseCount = parseInt(count.value);
+    if(caseCount>0)
+    {
     const caseNewCount = caseCount - 1;
     count.value = caseNewCount;
+   }
     calculateTotal();
 });
 document.getElementById('caseIncrease').addEventListener("click", function () {
@@ -137,8 +140,10 @@ document.getElementById('caseIncrease').addEventListener("click", function () {
 document.getElementById('caseDecrease').addEventListener("click", function () {
     const countValue = document.getElementById('preCount');
     const ticketCount = parseInt(countValue.value);
+    if(ticketCount>0){
     const caseNewCount = ticketCount - 1;
     countValue.value = caseNewCount;
+    }
     calculateTotal();
 });
 
